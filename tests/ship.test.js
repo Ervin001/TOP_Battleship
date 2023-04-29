@@ -8,6 +8,7 @@ describe('Ship', () => {
 
   test('Show if the ship sunk', () => {
     ship.hit(); // #hits === 1
-    expect(ship.isSunk()).toBeFalsy();
+    ship.hit(); // #hits === 2
+    expect(ship.isSunk()).not.toBeFalsy();
   });
 });
