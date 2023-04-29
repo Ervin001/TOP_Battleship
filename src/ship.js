@@ -1,5 +1,6 @@
 class Ship {
   #sunk = false;
+
   #hits = 0;
 
   constructor(length) {
