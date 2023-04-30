@@ -3,21 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "ckPrettier": "npx eslint-config-prettier ./src/main.js",
+    "build": "webpack"
   },
+  "build": "webpack",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
     "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
+    "prettier": "2.8.8",
     "webpack": "^5.81.0"
   },
   "type": "module"
