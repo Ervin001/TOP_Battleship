@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// console.log('Hello world');\n\n//# sourceURL=webpack://top_battleship/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('Hello world');\n\n//# sourceURL=webpack://top_battleship/./src/main.js?");
 
 /***/ })
 
