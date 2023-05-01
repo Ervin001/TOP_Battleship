@@ -1,17 +1,17 @@
 class Ship {
   #sunk = false;
+
   #hits = 0;
 
   constructor(length) {
     this.length = length;
   }
 
+  /**
+   * function increases the hits on the ship
+   */
   hit() {
     this.#hits++;
-  }
-
-  logLength() {
-    return this.length;
   }
 
   isSunk() {
