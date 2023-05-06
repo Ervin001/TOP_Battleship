@@ -12,6 +12,11 @@ class Ship {
     this.#hits++;
   }
 
+  // func to show the number of hits
+  showHits() {
+    return this.#hits;
+  }
+
   isSunk() {
     // Returns true or false based on number of hits and the length
     // this.length === this.hits ? true : false;
