@@ -11,6 +11,7 @@
   },
   "ignorePatterns": ["node_modules/", "**/*.test.js", "**/*.spec.js"],
   "rules": {
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "import/extensions": "off"
   }
 }
