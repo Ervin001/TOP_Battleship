@@ -1,3 +1,4 @@
+import Node from './node.js';
 import Ship from './ship.js';
 
 class GameBoard {
@@ -31,12 +32,7 @@ class GameBoard {
     // loops populates the rows 'y'
     for (let n = 0; n < this.#boardLength; n++) {
       for (let j = 0; j < this.#boardLength; j++) {
-        this.#board[n][j] = {
-          x: n,
-          y: j,
-          visited: null,
-          ship: null,
-        };
+        this.#board[n][j] = new Node(n, j);
       }
     }
   }
@@ -48,6 +44,18 @@ class GameBoard {
         this.#ships.push(ship);
       }
     }
+  }
+
+  /**
+   *
+   * @param {number} xCoord - The x coordinates of the ship's position.
+   * @param {number} yCoord - The y coordinates of the ship's position.
+   * @param {{}} ship - The ship object to place.
+   * @param {string} direction - The direction in which to place the ship.
+   * @returns {void}
+   */
+  placeShip(xCoord, yCoord, ship, direction) {
+    return { xCoord, yCoord, ship, direction };
   }
 
   get ships() {

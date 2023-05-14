@@ -3,7 +3,7 @@ class Ship {
 
   #hits = 0;
 
-  #direction = 'Horizontal';
+  #direction = 'h'; // alt: v
 
   constructor(length) {
     this.length = length;
