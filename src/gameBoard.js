@@ -1,21 +1,24 @@
+import Ship from './ship.js';
+
 class GameBoard {
   #board = [];
 
   #boardLength = 10;
 
+  #ships = [];
+
   constructor() {
     this.#createBoard();
+    this.#createShips();
   }
 
   /**
-   * @x coordinate for x
-   * @y coordinate for y
-   * @func check if ship is hit or not,
-   * if it hit then it should send the
-   * hit function to the right ship.
-   * Otherwise record the missed shot
+   * Check if the ship is hit or not, if it is hit then it should send the hit function to the right ship. Otherwise, record the missed shot.
+   * @param {number} x - The x coordinate for the attack
+   * @param {number} y - the y coordinate for the attack
+   * @returns {undefined}
    */
-  recieveAttack(x, y) {
+  receiveAttack(x, y) {
     return this;
   }
 
@@ -31,10 +34,24 @@ class GameBoard {
         this.#board[n][j] = {
           x: n,
           y: j,
-          value: 0,
+          visited: null,
+          ship: null,
         };
       }
     }
+  }
+
+  #createShips() {
+    for (let length = 4; length >= 1; length--) {
+      for (let i = 0; i < 5 - length; i++) {
+        const ship = new Ship(length);
+        this.#ships.push(ship);
+      }
+    }
+  }
+
+  get ships() {
+    return this.#ships;
   }
 }
 

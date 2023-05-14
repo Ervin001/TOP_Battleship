@@ -12,6 +12,7 @@
   "ignorePatterns": ["node_modules/", "**/*.test.js", "**/*.spec.js"],
   "rules": {
     "no-plusplus": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "max-len": "off"
   }
 }

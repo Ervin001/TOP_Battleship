@@ -3,6 +3,8 @@ class Ship {
 
   #hits = 0;
 
+  #direction = 'Horizontal';
+
   constructor(length) {
     this.length = length;
   }
