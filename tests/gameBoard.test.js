@@ -17,4 +17,13 @@ describe('first', () => {
       expect(ship instanceof Ship).toBe(true);
     });
   });
+
+  test('Check if placed ship works', () => {
+    expect(gameBoard.getNeighbors(9, 3, gameBoard.ships[0], 'h')).toEqual([
+      9, 8, 7, 6,
+    ]);
+    expect(gameBoard.getNeighbors(9, 3, gameBoard.ships[0], 'v')).toEqual([
+      3, 4, 5, 6,
+    ]);
+  });
 });

@@ -58,6 +58,39 @@ class GameBoard {
     return { xCoord, yCoord, ship, direction };
   }
 
+  getNeighbors(x, y, ship, direction) {
+    const arr = [];
+    let rightX = x;
+    let leftX = x - 1;
+    let upY = y;
+    let downY = y - 1;
+
+    if (direction === 'h') {
+      for (let i = 0; i < ship.length; i++) {
+        if (rightX < 10) {
+          arr.push(this.#board[rightX][y].x);
+          rightX++;
+        } else {
+          arr.push(this.#board[leftX][y].x);
+          leftX--;
+        }
+      }
+    }
+
+    if (direction === 'v') {
+      for (let n = 0; n < ship.length; n++) {
+        if (upY < 10) {
+          arr.push(this.#board[x][upY].y);
+          upY++;
+        } else {
+          arr.push(this.#board[x][downY].y);
+          downY++;
+        }
+      }
+    }
+    return arr;
+  }
+
   get ships() {
     return this.#ships;
   }
